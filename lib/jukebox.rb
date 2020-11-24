@@ -47,16 +47,17 @@ end
 def run(songs)
   puts "Please enter a command:"
   command = gets.strip
-  if command == "help"
-    help
-    run(songs)
-  elsif command == "play"
-    play(songs)
-    run(songs)
-  elsif command == "list"
-    list(songs)
-    run(songs)
-  elsif command == "exit"
-    exit_jukebox
+  case command
+    when "help"
+      help
+      run(songs)
+    when "play"
+      play(songs)
+      run(songs)
+    when "list"
+      list(songs)
+      run(songs)
+    when "exit"
+      exit_jukebox
   end
 end
